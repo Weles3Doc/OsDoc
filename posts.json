@@ -1,0 +1,98 @@
+---
+layout: null
+---
+
+{%- assign posts = site.posts | sort: "title" -%}
+{%- assign cat0 = "" | split: "" -%}
+{%- for c in site.categories -%}
+    {%- for p in c[1] -%}
+        {%- if p.categories[0] == c[0] -%}
+
+            {%- assign cn0 = c[0] -%}
+
+            {%- for n in site.data.cat -%}
+                {%- if n[0] == cn0 -%}
+                    {%- assign cn0 = n[1] | append: ":" | append: cn0 -%}
+                    {%- break -%}
+                {%- endif -%}
+            {%- endfor -%}
+
+            {%- assign cat0 = cat0 | push: cn0 -%}
+            {%- break -%}
+        {%- endif -%}
+    {%- endfor -%}    
+{%- endfor -%}
+{%- assign cat0 = cat0 | sort -%}
+
+[
+{%- assign c0s = true -%}
+{%- for cn0 in cat0 -%}
+    {%- assign cn0v = cn0 | split: ":" -%}
+
+    {%- if c0s -%}
+        {%- assign c0s = false -%}
+    {%- else -%}
+    ,
+    {%- endif -%}
+
+    [
+        "{{ cn0v[0] }}", [
+    
+    {%- assign cat1 = "" | split: "" -%}
+    {%- for c in site.categories -%}
+        {%- for p in c[1] -%}
+            {%- if p.categories[0] == cn0v[1] and p.categories[1] == c[0] -%}
+                {%- assign cn1 = c[0] -%}    
+                {%- for n in site.data.cat -%}
+                    {%- if n[0] == cn1 -%}
+                        {%- assign cn1 = n[1] | append: ":" | append: cn1 -%}
+                        {%- break -%}
+                    {%- endif -%}
+                {%- endfor -%}
+    
+                {%- assign cat1 = cat1 | push: cn1 -%}
+                {%- break -%}
+            {%- endif -%}
+        {%- endfor -%}    
+    {%- endfor -%}
+    {%- assign cat1 = cat1 | sort -%}
+
+    {%- assign c1s = true -%}
+    {%- for cn1 in cat1 -%}
+        {%- assign cn1v = cn1 | split: ":" -%}
+
+        {%- if c1s -%}
+            {%- assign c1s = false -%}
+        {%- else -%}
+        ,
+        {%- endif -%}
+
+        [
+            "{{ cn1v[0] }}", [
+
+        {%- assign ps = true -%}
+        {%- for post in posts -%}
+            {%- if post.categories[0] == cn0v[1] and post.categories[1] == cn1v[1] -%}
+                {%- if ps -%}
+                    {%- assign ps = false -%}
+                {%- else -%}
+                ,
+                {%- endif -%}
+
+                [
+                    "{{ post.title }}",  
+                    "{{ post.url}}"
+                ]
+            {%- endif -%}
+        {%- endfor -%}
+
+
+
+            ]
+        ]
+    {%- endfor -%}
+
+        ]
+    ]
+{%- endfor -%}
+]
