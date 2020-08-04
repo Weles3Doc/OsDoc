@@ -4,7 +4,7 @@ title: Pierwsze logowanie
 
 # Pierwsze logowanie
 
-Gdy otrzymają Państwo dokument z danymi do podglądu właściciela, prosimy na nim odszukać login, który jest ciągiem cyfr oraz hasło tymczasowe. Po czym prosimy przejść na stronę: https://e-adm.pl/.
+Gdy otrzymają Państwo dokument z danymi do podglądu właściciela, prosimy na nim odszukać login, który jest ciągiem cyfr oraz hasło tymczasowe podane przez administrację. Po czym prosimy przejść na stronę: https://e-adm.pl/.
 
 ![Pierwsze logowanie](prwlog1.png)
 
