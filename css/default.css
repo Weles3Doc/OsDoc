@@ -65,10 +65,8 @@
     margin-bottom: 2em;
 }
 
-#posts > div > div > div:first-child {
+#posts > div > div > div > *:first-child {
     text-align: center;
-    border-bottom: 1px solid var(--wls-base-dark);
-    margin-bottom: 1em;
 }
 
 .doc-area {

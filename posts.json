@@ -38,41 +38,9 @@ layout: null
     [
         "{{ cn0v[0] }}", [
     
-    {%- assign cat1 = "" | split: "" -%}
-    {%- for c in site.categories -%}
-        {%- for p in c[1] -%}
-            {%- if p.categories[0] == cn0v[1] and p.categories[1] == c[0] -%}
-                {%- assign cn1 = c[0] -%}    
-                {%- for n in site.data.cat -%}
-                    {%- if n[0] == cn1 -%}
-                        {%- assign cn1 = n[1] | append: ":" | append: cn1 -%}
-                        {%- break -%}
-                    {%- endif -%}
-                {%- endfor -%}
-    
-                {%- assign cat1 = cat1 | push: cn1 -%}
-                {%- break -%}
-            {%- endif -%}
-        {%- endfor -%}    
-    {%- endfor -%}
-    {%- assign cat1 = cat1 | sort -%}
-
-    {%- assign c1s = true -%}
-    {%- for cn1 in cat1 -%}
-        {%- assign cn1v = cn1 | split: ":" -%}
-
-        {%- if c1s -%}
-            {%- assign c1s = false -%}
-        {%- else -%}
-        ,
-        {%- endif -%}
-
-        [
-            "{{ cn1v[0] }}", [
-
         {%- assign ps = true -%}
         {%- for post in posts -%}
-            {%- if post.categories[0] == cn0v[1] and post.categories[1] == cn1v[1] -%}
+            {%- if post.categories[0] == cn0v[1] -%}
                 {%- if ps -%}
                     {%- assign ps = false -%}
                 {%- else -%}
@@ -85,12 +53,6 @@ layout: null
                 ]
             {%- endif -%}
         {%- endfor -%}
-
-
-
-            ]
-        ]
-    {%- endfor -%}
 
         ]
     ]
