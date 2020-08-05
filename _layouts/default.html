@@ -1,54 +1,66 @@
 <html>
-    <head>
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/icons/favicon-16x16.png">
-        <link rel="manifest" href="{{ site.baseurl }}/icons/site.webmanifest">
-        <link rel="mask-icon" href="{{ site.baseurl }}/icons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="{{ site.baseurl }}/icons/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/icons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">        
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">    
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/default.css"/>
 
-        {% seo %}
-        <script src="{{ site.baseurl }}/js/vars.js"></script>
-        <script src="{{ site.baseurl }}/js/posts.js"></script>
-        <script src="https://kit.fontawesome.com/59c136fc78.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-light bg-white mb-2" id="navbar">
-            <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}{{ site.data.icons.w3nt }}" class="doc-logo-lg d-sm-none">
-                <img src="{{ site.baseurl }}{{ site.data.icons.w3 }}" class="doc-logo-lg d-none d-sm-inline">
-            </a>
-    
-            <form class="form-inline mb-0">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <i class="fad fa-search input-group-text icon-lg"></i>
-                    </div>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Szukaj" id="search" disabled>
+<head>
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/icons/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/icons/site.webmanifest">
+    <link rel="mask-icon" href="{{ site.baseurl }}/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/default.css" />
+
+    {% seo %}
+    <script src="{{ site.baseurl }}/js/vars.js"></script>
+    <script src="{{ site.baseurl }}/js/posts.js"></script>
+    <script src="https://kit.fontawesome.com/59c136fc78.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166321574-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166321574-2');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-white mb-2" id="navbar">
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}{{ site.data.icons.w3nt }}" class="doc-logo-lg d-sm-none">
+            <img src="{{ site.baseurl }}{{ site.data.icons.w3 }}" class="doc-logo-lg d-none d-sm-inline">
+        </a>
+
+        <form class="form-inline mb-0">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <i class="fad fa-search input-group-text icon-lg"></i>
                 </div>
-            </form>    
-        </nav>
-    
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-2 d-none" id="search_result">
-                </div>
+                <input class="form-control mr-sm-2" type="search" placeholder="Szukaj" id="search" disabled>
             </div>
-            <div class="row">
-                <div class="col-12 doc-content">
-                    {{ content }}
-                </div>
+        </form>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-2 d-none" id="search_result">
             </div>
         </div>
-        <script src="{{ site.baseurl }}/js/jquery.js"></script>
-        <script src="{{ site.baseurl }}/js/bootstrap.js"></script>    
-        <script src="{{ site.baseurl }}/js/search.js"></script>
-    </body>
+        <div class="row">
+            <div class="col-12 doc-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <script src="{{ site.baseurl }}/js/jquery.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.js"></script>
+    <script src="{{ site.baseurl }}/js/search.js"></script>
+</body>
+
 </html>
