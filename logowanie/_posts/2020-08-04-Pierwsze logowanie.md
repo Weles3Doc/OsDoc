@@ -4,33 +4,34 @@ title: Pierwsze logowanie
 
 # Pierwsze logowanie
 
-Gdy otrzymają Państwo dokument z danymi do podglądu właściciela, prosimy na nim odszukać login, który jest ciągiem cyfr oraz hasło tymczasowe podane przez administrację. Po czym prosimy przejść na stronę: https://e-adm.pl/.
+Gdy otrzymają Państwo dokument z danymi do podglądu właściciela, prosimy na nim odszukać login, który jest ciągiem cyfr oraz hasło tymczasowe podane przez administrację. Po czym prosimy przejść na stronę: **<https://tomojdom.pl/>**.
 
 ![Pierwsze logowanie](prwlog1.png)
 
 Na stronie logowania:
 
-- W polu Nazwa użytkownika wpisujemy login.
-- W polu Hasło wpisujemy Hasło tymczasowe podane przez administrację/zarządcę. 
-- Klikamy: Zaloguj.
+- Pole **Nazwa użytkownika** > wpisujemy **login**.
+- Pole **Hasło** > wpisujemy **Hasło tymczasowe** podane przez administrację/zarządcę. 
+- Klikamy: **Zaloguj hasłem**.
 
 ![Pierwsze logowanie](prwlog2.png)
 
-System wymusi zmianę hasła, zostaną Państwo przeniesieni na stronę jego zmiany. Prosimy wypełnić następujące pola:
+System wymusi zmianę hasła na własne, zostaną Państwo przeniesieni na stronę jego zmiany. Prosimy wypełnić następujące pola:
 
-- Pole Nowe hasło > wpisują Państwo własne hasło.
-- Pole Potwierdź nowe hasło > prosimy wpisać własne hasło ponownie.
-- Pole Stare lub tymczasowe hasło > wpisujemy hasło tymczasowe otrzymane od administratora/zarządcy.
-- Nowe hasło musi spełniać warunki podane na stronie.
+- Pole **Nowe hasło** > wpisują Państwo **własne hasło**.
+- Pole **Potwierdź nowe hasło** > prosimy wpisać **własne hasło** ponownie.
+- Pole **Stare lub tymczasowe hasło** > wpisujemy **hasło tymczasowe** otrzymane od administratora/zarządcy.
+- Klikamy: **Zmień hasło**.
 
-Na koniec prosimy kliknąć Zmień hasło. Zostaną Państwo przekierowani z powrotem do strony logowania.
+Nowe hasło musi spełniać warunki podane na stronie. Zostaną Państwo przekierowani z powrotem do strony logowania.
 
 ![Pierwsze logowanie](prwlog3.png)
 
-Na stronie logowania:
-- W polu Nazwa użytkownika wpisujemy login.
-- W polu Hasło wpisujemy tym razem własne hasło. 
-- Klikamy: Zaloguj. 
+Od tego momentu na podgląd właściciela logują się już Państwo za pomocą własnego hasła, na stronie logowania:
+
+- Pole **Nazwa użytkownika** > wpisujemy **login**.
+- Pole **Hasło** > wpisujemy tym razem **własne hasło**. 
+- Klikamy: **Zaloguj hasłem**. 
 
 W tym momencie powinni trafić Państwo na stronę kartoteki mieszkańca.
 
