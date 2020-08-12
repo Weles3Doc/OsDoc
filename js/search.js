@@ -1,10 +1,10 @@
-(function() {
+(function () {
     var sel = document.getElementById("search");
     var res = document.getElementById("search_result");
     if (sel && res) {
         var tid;
         function doSearch() {
-            postsPromise().then(function(postsData) {
+            postsPromise().then(function (postsData) {
                 if (tid != undefined) window.clearTimeout(tid);
                 tid = window.setTimeout(function () {
                     res.classList.add("d-none");
@@ -14,28 +14,25 @@
                         var s0 = testRXs(rxs, postsData[i][0])
                         for (var j = 0; j < postsData[i][1].length; j++) {
                             var s1 = testRXs(rxs, postsData[i][1][j][0])
-                            for (var k = 0; k < postsData[i][1][j][1].length; k++) {
-                                var s2 = testRXs(rxs, postsData[i][1][j][1][k][0])
-                                var score = s2.score * 2 + s1.score * 1.5 + s0.score;
-                                if (!score) continue;
-                                for (var m = 0; m < rxs.length; m++) {
-                                    if (!s0.mtx[m] && !s1.mtx[m] && !s2.mtx[m]) {
-                                        score = 0;
-                                        break;
-                                    }
+                            var score = s1.score * 2 + s0.score;
+                            if (!score) continue;
+                            for (var m = 0; m < rxs.length; m++) {
+                                if (!s0.mtx[m] && !s1.mtx[m]) {
+                                    score = 0;
+                                    break;
                                 }
-                                if (!score) continue;
-                                matches.push({
-                                    score: score,
-                                    sa: [s0, s1, s2],
-                                    ta: [postsData[i][0], postsData[i][1][j][0], postsData[i][1][j][1][k][0]],
-                                    u: postsData[i][1][j][1][k][1]
-                                })
                             }
+                            if (!score) continue;
+                            matches.push({
+                                score: score,
+                                sa: [s0, s1],
+                                ta: [postsData[i][0], postsData[i][1][j][0]],
+                                u: postsData[i][1][j][1]
+                            })
                         }
                     }
                     matches.sort(function (x, y) {
-                        return y.sore - x.score || sc(x.ta[0], y.ta[0]) || sc(x.ta[1], y.ta[1]) || sc(x.ta[2], y.ta[2])
+                        return y.sore - x.score || sc(x.ta[0], y.ta[0]) || sc(x.ta[1], y.ta[1])
                     })
                     res.innerText = "";
                     if (!matches.length) return;
@@ -43,7 +40,7 @@
                         var del = document.createElement("div");
                         var ael = document.createElement("a");
                         ael.href = baseUrl + matches[m].u;
-                        for (var i = 0; i < 3; i++) {
+                        for (var i = 0; i < 2; i++) {
                             if (matches[m].ta[i] == undefined) continue;
                             var ptr = 0;
                             if (i) {
@@ -70,7 +67,7 @@
                         res.appendChild(del)
                     }
                     res.classList.remove("d-none");
-                }, 500)                
+                }, 500)
             })
         }
 
