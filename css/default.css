@@ -56,6 +56,15 @@
     border-radius: .25em;
     box-shadow: 0.2em 0.2em 0.4em lightgrey;
     border: 1px solid gray;
+    z-index: 10;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    width: calc(100% - 2em);
+    margin: 4em 1em 1em 1em;
+    max-height: calc(100vh - 5em);
+    background-color: white;
+    padding: 1em;
 }
 
 #posts > div > div {
@@ -80,8 +89,4 @@
 
 .doc-text {
     font-size: large;
-}
-
-.front {
-    z-index: 10;
 }
