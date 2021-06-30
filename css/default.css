@@ -82,6 +82,6 @@
     font-size: large;
 }
 
-.max-50h {
-    max-height: 50vh;
+.front {
+    z-index: 10;
 }
