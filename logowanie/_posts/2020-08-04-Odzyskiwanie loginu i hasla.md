@@ -13,7 +13,7 @@ Nie ma możliwości odzyskania loginu, w tym celu prosimy o kontakt z administra
 Aby odzyskać hasło, trzeba spełniać dwa warunki:
 
 - Znać login.
-- Chociaż raz zalogować się do podglądu właściciela poprawnie i podać adres e-mail do odzyskiwania hasła.
+- Chociaż raz zalogować się do podglądu właściciela poprawnie i podać adres e-mail do odzyskiwania hasła. Adres może być już wcześniej wprowadzony przez administracje budynku.
 
 Jeśli nie spełniają Państwo tych warunków, prosimy o kontakt z administratorem/zarządcą nieruchomości. Poniżej prezentujemy sposób zresetowania hasła, gdy znany jest login i w Państwa kartotece jest podany e-mail. Na stronie logowania prosimy:
 
