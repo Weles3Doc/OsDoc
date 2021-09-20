@@ -4,14 +4,18 @@ title: Dane lokalu i odczyty liczników
 
 # Dane lokalu i odczyty liczników
 
-Aby sprawdzić dane lokalu lub odczyty Państwa liczników prosimy kliknąć górne menu, wybrać z niego zakładkę Nieruchomość. Następnie z drugiego podmenu wybrać Lokal.
+Aby sprawdzić dane lokalu lub odczyty Państwa liczników prosimy kliknąć górne menu, wybrać z niego zakładkę **Lokale**.
 
 ![Dane lokalu i liczników](daneloklicz1.png)
 
-Domyślnie jako pierwsza ładuje się karta z danymi lokalu. Po kliknięciu nazwy danej można zobaczyć historię jej zmian.
+W zakładce znajduje się jako pierwsza sekcja o nazwie **Lokale**, prezentuje ona mieszkania/garaże/komórki przypisane aktualnie do Państwa kartoteki.
 
 ![Dane lokalu i liczników](daneloklicz2.png)
 
-Natomiast po wybraniu karty Liczniki, wyświetlą się Państwu liczniki dodane do lokalu. Kliknięcie nazwy licznika spowoduje otwarcie historii odczytów i zużyć.
+Jako następna znajduje się sekcja **Liczniki**, przedstawia ona liczniki znajdujące się w lokalu, ich typ oraz numer i lokalizację. A po kliknięciu rozwinie się lista z odczytami i zużyciami danego licznika.
 
 ![Dane lokalu i liczników](daneloklicz3.png)
+
+Ostatnie znajdują się **Dane**, które są dodane do lokalu. Po kliknięciu na pozycję pokarze się tabelka ze zmianami danej, jeśli takie występują.
+
+![Dane lokalu i liczników](daneloklicz4.png)
